@@ -44,5 +44,14 @@ module.exports = function(environment) {
 
   }
 
+  ENV.contentSecurityPolicy = {
+
+    // Allow fonts to be loaded from http://fonts.gstatic.com
+    'font-src': "'self' http://fonts.gstatic.com",
+
+    // Allow loaded CSS from http://fonts.googleapis.com
+    'style-src': "'self' http://fonts.googleapis.com",
+  };
+
   return ENV;
 };
