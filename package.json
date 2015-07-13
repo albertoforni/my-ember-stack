@@ -1,7 +1,7 @@
 {
-  "name": "blog",
+  "name": "my-app-to-be-renamed",
   "version": "0.0.0",
-  "description": "Small description for blog goes here",
+  "description": "Description",
   "private": true,
   "directories": {
     "doc": "doc",

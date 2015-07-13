@@ -1,10 +1,9 @@
 /* jshint node: true */
-var appName = __dirname.split('/').slice(-2)[0];
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: appName,
-    podModulePrefix: appName + '/pods',
+    modulePrefix: 'my-app-to-be-renamed',
+    podModulePrefix: 'my-app-to-be-renamed/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
