@@ -20,6 +20,11 @@ module.exports = function(environment) {
     }
   };
 
+  // fixtures
+  ENV.FIXTURES = {
+    enabled: false
+  }
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -50,7 +55,7 @@ module.exports = function(environment) {
 
   }
 
-  // TODO create the prototype enviroment
+  // TODO create the prototype enviroment for loading fixtures
 
   ENV.contentSecurityPolicy = {
     'font-src': "'self' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
