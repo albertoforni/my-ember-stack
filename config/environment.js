@@ -26,6 +26,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    // enable fixtures
+    ENV.FIXTURES.enabled = true;
   }
 
   if (environment === 'test') {
@@ -38,19 +41,20 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+
+    // enable fixtures
+    ENV.FIXTURES.enabled = true;
   }
 
   if (environment === 'production') {
 
   }
 
+  // TODO create the prototype enviroment
+
   ENV.contentSecurityPolicy = {
-
-    // Allow fonts to be loaded from http://fonts.gstatic.com
-    'font-src': "'self' http://fonts.gstatic.com",
-
-    // Allow loaded CSS from http://fonts.googleapis.com
-    'style-src': "'self' http://fonts.googleapis.com",
+    'font-src': "'self' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
+    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
   };
 
   return ENV;
