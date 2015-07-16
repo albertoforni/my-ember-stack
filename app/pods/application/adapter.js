@@ -1,9 +1,13 @@
 import DS from 'ember-data';
-import Configuration from 'flight-search/config/environment';
+import Ember from 'ember';
+import Configuration from 'my-ember-stack/config/environment';
 
 var adapter = DS.RESTAdapter.extend();
 
 if (Configuration.FIXTURES.enabled) {
+
+  Ember.Logger.info('PROTOTYPE MODE: Fixtures adapter ON');
+
   adapter = DS.FixtureAdapter.extend({
     queryFixtures: function(records, query) {
       return records.filter(function(record) {

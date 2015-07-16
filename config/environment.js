@@ -23,6 +23,11 @@ module.exports = function(environment) {
   // fixtures
   ENV.FIXTURES = {
     enabled: false
+  };
+
+  if (environment === 'prototype') {
+    // enable fixtures
+    ENV.FIXTURES.enabled = true;
   }
 
   if (environment === 'development') {
@@ -31,9 +36,6 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-
-    // enable fixtures
-    ENV.FIXTURES.enabled = true;
   }
 
   if (environment === 'test') {
@@ -46,16 +48,11 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-
-    // enable fixtures
-    ENV.FIXTURES.enabled = true;
   }
 
   if (environment === 'production') {
 
   }
-
-  // TODO create the prototype enviroment for loading fixtures
 
   ENV.contentSecurityPolicy = {
     'font-src': "'self' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
