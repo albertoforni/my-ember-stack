@@ -1,25 +1,32 @@
 // Import libraries
 @import 'bower_components/nib'
-@import 'mixins'
+@import 'mixins/*'
 
 // Fonts
-$font-size-0 = 16px
-$font-size-1 = .8em
+$font-size-0 = remfy(16px)
+$font-size-1 = remfy(12px)
+$font-size-2 = remfy(24px)
 
 $font-weight-0 = 300
 $font-weight-1 = 400
 $font-weight-2 = 700
 
 // colors
-$color-0 = #000
+$color-0 = #010001
+$color-1 = #ed6db0
+$color-2 = #ffe30a
+$color-3 = #ffffff
 
 // General Style
+html
+  font-size 62.5%
+
 body
   font-family 'Raleway', sans-serif
   font-weight $font-weight-1
   font-size $font-size-0
-
-  background-color $color-4
+  background-color $color-3
+  color $color-0
 
 *,
 hr
@@ -34,7 +41,7 @@ a
   max-width 1170px
 
 .row
-  margin-top: 20px;
+  margin-top 20px
 
 // Import modules
 // @import 'modules/*'
