@@ -36,7 +36,8 @@
     "ember-data": "1.13.5",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
-    "ember-normalize": "0.0.2"
+    "ember-normalize": "0.0.2",
+    "liquid-fire": "0.20.4"
   },
   "dependencies": {
     "ember-cli-fixture-loader": "0.0.3"
