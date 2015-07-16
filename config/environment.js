@@ -2,8 +2,8 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'my-app-to-be-renamed',
-    podModulePrefix: 'my-app-to-be-renamed/pods',
+    modulePrefix: 'my-ember-stack',
+    podModulePrefix: 'my-ember-stack/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
